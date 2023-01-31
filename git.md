@@ -172,13 +172,24 @@ git status  # OPTIONAL: check the file status
 **1a) Initialize a folder as local repo**
 ```bash
 git init
+...
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin [http url]
+git push -u origin main
 ```
-With this you'll generate "git things" in your current local folder. This folder is now a git workspace.  
+> With this you'll generate "git things" in your current local folder. This folder is now a git workspace.  
+
 **1b) Clone a remote repo to local**
 ```bash
 git clone [repo-url]
+...
+git add .
+git commit -m "commit message"
+git push
 ```
-With this you can first create a blank git repo, clone to local and then start coding.
+> With this you can first create a blank git repo, clone to local and then start coding.  
 
 **2) Modify the files**  
 Make some changes, then commit them as shown in 2.1)
