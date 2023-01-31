@@ -1,13 +1,13 @@
 # Git Manual
 
-## An overview of git workflow
 <div align=center>
-    <img src="git-workflow-1.png"/><br>
-    Fig. overview git workflow.  
+    <img src="cover.png"/><br>
+    
 </div> 
+<br>  
 
 An official interactivable animation about git commands: [learn git branching](https://learngitbranching.js.org/?locale=zh_CN)  
-<br>
+
 
 ***
 ## 0) Git concept
@@ -23,7 +23,7 @@ Git is a distributed version control tool.
 
 - All the versions are cloned to user's local PC.
 - User can commit the changes offline to local, push them to remote repository when connect to the Internet.
-- Causes extra local storage usage, but provides stable development pileline.
+- Causes extra local storage usage, but provides stable development pipeline.
 </details>
 <br>
 
@@ -63,8 +63,8 @@ Copy and paste to git account.
 <br>
 <div align=center>
     <p float="left">
-    <img src="layout.png" height="300" />
-    <img src="dir.png" height="300" /> 
+    <img src="layout.png" height="250" />
+    <img src="dir.png" height="250" /> 
   </p>
     Fig. Layout of Git repository.  
 
@@ -273,7 +273,7 @@ git branch -dr [remote/branch]
     Fig. common-used git cmd.  
 </div> 
 
-## An overview of git workflow
+## An overview about git workflow
 <div align=center>
     <img src="git-workflow-1.png"/><br>
     Fig. overview git workflow.  
