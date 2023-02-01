@@ -6,8 +6,10 @@
 </div> 
 <br>  
 
-An official interactivable animation about git commands: [learn git branching](https://learngitbranching.js.org/?locale=zh_CN)  
-For easy setup and get familiar with git cmd, check [Git: Reference Sheet](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
+Some useful resources:
+- An official interactivable animation about git commands: [learn git branching](https://learngitbranching.js.org/?locale=zh_CN)  
+- For easy setup and get familiar with git cmd, check [Git: Reference Sheet](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
+- For professional topics like commit and branching, check [youtube: Git for professionals Tutorials](https://www.youtube.com/watch?v=Uszj_k0DGsg)  
 
 ***
 ## 0) Git concept
@@ -62,7 +64,7 @@ Copy and paste to git account.
 
 <br>
 <div align=center>
-    <img src="dir.png"/>  
+    <img src="dir.png" width=600/><br>
     Fig. How a git directory looks like.  
 </div> 
 <br>
@@ -74,7 +76,7 @@ Copy and paste to git account.
 
 <br>
 <div align=center>
-    <img src="workflow.png" width="600" /><br>
+    <img src="workflow.png" width=600/><br>
     Fig. Workflow of Git.  
 
 </div> 
@@ -144,16 +146,27 @@ subject是commit目的的简短描述，不超过50个字符。
 What's better: **DO NOT commit all the changes at one time**  
 <div align=center>
     <p float="left">
-    <img src="bad_commit.png" height="175" />
-    <img src="good_commit.png" height="175" />
+    <img src="bad_commit.png" height="200" />
+    <img src="good_commit.png" height="200" />
     </p>
 </div>  
+
+You can really select individual files, or even a part of file for one commit and leave others for future commit.  
+
+<details>
+    <summary>Commit tricks</summary>
+
+Check [youtube: Git for professionals Tutorials](https://www.youtube.com/watch?v=Uszj_k0DGsg)  
+```bash
+git add -p [filename]  # -p brings us down to the patch level
+```
+</details>
 
 <br>  
 
 To check file status:  
 ```bash
-git status  # OPTIONAL: check the file status
+git status  # OPTIONAL
 ```
 
 <details>
@@ -175,8 +188,13 @@ git status  # OPTIONAL: check the file status
 
 To check file changes:  
 ```bash
-git diff [filename]  # OPTIONAL: check the file status
+git diff [filename]  # OPTIONAL
 ```
+To check change log:  
+```bash
+git log  # OPTIONAL
+```
+
 
 ***
 ### 2.2) Create your own git project
