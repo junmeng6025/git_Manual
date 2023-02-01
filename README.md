@@ -333,11 +333,17 @@ git branch -dr [remote/branch]
 ***
 
 <details>
-    <summary>Advanced git skills 》》》</summary>
+    <summary>>>>  Advanced git skills  >>></summary>
 
 ## Pull requests
 - Provided by Git hosting
 - Invites reviewers to provide feedback before merging
+  
+  <div align=center>
+    <img src="/figs/pull2.png"/><br>
+    Fig. pull request.  
+  </div> 
+
 - Give ideas to an open-source repo that you don't have right access to  
   <br>
   > **fork**: your personal copy of a git repo.  
@@ -381,5 +387,28 @@ git branch -dr [remote/branch]
     Fig. solve the merge conflict.  
   </div> 
 ## Merge vs. Rebase
+Besides update new features, sometimes we need to flashback into an existing branch.
+### Merge
+  <br>
+  <div align=center>
+    <img src="/figs/how-merge-works.png"/><br>
+    Fig. How merge works.  
+  </div> 
+
+  <br>
+
+  When git performs a merge, it looks for 3 commits:  
+  - 1) **the common ancestor commit:** If you follow the history of two branches in a project, they always have *at least one commit in common*. At this point, both branches had the same content.
+  - 2) **last commit:** after that they envolve differently.
+  - 3) **the end point of each branch:** the goal of an integration is to combine the current states of two branches, so the latest revisions are important.  
+
+  **Merge commit**  
+  <div align=center>
+    <img src="/figs/merge-commit2.png"/><br>
+    <img src="/figs/merge-commit3.png"/><br>
+    Fig. merge commit.  
+  </div> 
+
+### Rebase
 
 </details>
