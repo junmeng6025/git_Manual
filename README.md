@@ -356,9 +356,30 @@ git branch -dr [remote/branch]
   - cherry pick
   - pull
   - reapplying a stash
-- **What is?**
-- **How to solve?**
+  - ...
 
+- **What is?**  
+  i.e. when contradictory changes happen:
+  - When different changes are made at the the exact same line of code, git can onlt tell this part has been modified, but cannot decide which modification should be kept.
+  - Or, files are modified in one branch but deleted in another.
+  <br>
+  <div align=center>
+    <img src="/figs/merge-conflict.png"/><br>
+    Fig. merge conflict.  
+  </div> 
+  
+- **How to solve?**
+  Undo a conflict and start over:
+  ```bash
+  git merge --abort
+  git rebase --abort
+  ```
+  Simply clean up the lines causing the conflicts! Discuss with your partner and decide what the change should be like.
+  <br>
+  <div align=center>
+    <img src="/figs/solve-conflict.png"/><br>
+    Fig. solve the merge conflict.  
+  </div> 
 ## Merge vs. Rebase
 
 </details>
