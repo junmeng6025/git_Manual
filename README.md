@@ -293,6 +293,3 @@ git branch -dr [remote/branch]
     <img src="git-workflow-1.png"/><br>
     Fig. overview git workflow.  
 </div> 
-
-## GitKraken
-check [this PDF](GitKraken-Client-Cheat-Sheet-v5b.pdf)
