@@ -1,7 +1,7 @@
 # Git Manual
 
 <div align=center>
-    <img src="cover.png"/><br>
+    <img src="/figs/cover.png"/><br>
     
 </div> 
 <br>  
@@ -17,7 +17,7 @@ Some useful resources:
     <summary> Click for details </summary>
 
 <div align=center>
-    <img src = "git-concept.png" width=300><br>
+    <img src = "/figs/git-concept.png" width=300><br>
     Fig. Git concept
 </div> 
 <br>
@@ -64,7 +64,7 @@ Copy and paste to git account.
 
 <br>
 <div align=center>
-    <img src="dir.png" width=600/><br>
+    <img src="/figs/dir.png" width=600/><br>
     Fig. How a git directory looks like.  
 </div> 
 <br>
@@ -76,7 +76,7 @@ Copy and paste to git account.
 
 <br>
 <div align=center>
-    <img src="workflow.png" width=600/><br>
+    <img src="/figs/workflow.png" width=600/><br>
     Fig. Workflow of Git.  
 
 </div> 
@@ -146,8 +146,8 @@ subject是commit目的的简短描述，不超过50个字符。
 What's better: **DO NOT commit all the changes at one time**  
 <div align=center>
     <p float="left">
-    <img src="bad_commit.png" height="200" />
-    <img src="good_commit.png" height="200" />
+    <img src="/figs/bad_commit.png" height="200" />
+    <img src="/figs/good_commit.png" height="200" />
     </p>
 </div>  
 
@@ -248,19 +248,19 @@ doc/*.txt   # 会忽略 doc 目录中的 .txt文件，但不会忽略 doc/server
 ***  
 ## Summary of common-used git cmd
 <div align=center>
-    <img src="git_cmd.png" width="600" /><br>
+    <img src="/figs/git_cmd.png" width="600" /><br>
     Fig. common-used git cmd.  
 </div> 
 
 ## 3) Git addon in IDE / Git desktop app
-E.g. git addon in VSCode, GitKraken etc... But recommended is that first  get familiar with git workflow with cmd lines, knowing what you are doing, then come to these GUI git tools.
+E.g. git addon in VSCode, GitKraken etc... But recommended is that first  get familiar with git workflow with cmd lines, knowing what you are doing before come to these GUI git tools.
 
 > Check [GitKraken cheat sheet](GitKraken-Client-Cheat-Sheet-v5b.pdf)
 
 
 ## **4) Git branch (for coorpation!)**
 <div align=center>
-    <img src="git-branch.png" width="600" /><br>
+    <img src="/figs/git-branch.png" width="600" /><br>
     Fig. git branch.  
 </div> 
 <br>
@@ -295,19 +295,70 @@ git branch -dr [remote/branch]
 
 - 如果多个分支并行执行，代码互不冲突，相当于同时存在多个版本；  
 - 如果同一个文件在合并分支时都被修改过，则会引起冲突。此时需要选择要保留哪个版本，修改冲突，然后重新提交。  
-- `master` 主分支应该非常稳定，用来发布新的版本。一般不允许直接在上面进行开发工作。开发工作应该在其他新建的分支上进行，经过测试，确定可以稳定运行之后，再合并到主分支 (`merge`)。
+- `master` 主分支应该非常稳定，用来发布新的版本。一般不允许直接在上面进行开发工作。开发工作应该在其他新建的分支上进行，经过测试，确定可以稳定运行之后，再合并到主分支 (`merge`)。  
+
+
+<details>
+    <summary>Long-running & Short-lived branches</summary>
+
+<br>
+<div align=center>
+    <img src="/figs/branch_strategy.png" width="600" /><br>
+    Fig. Branch strategy.  
+</div>
+<br>
+
+- **Long-running:** exist through the complete lifetime of the project; often mirror "stages" in your dev lifecycle.
+- **Short-lived:** for few features, bug fixes, refactorings, experiments... will be deleted after integration (via `merge`/`rebase`).
+- Typically a short-lived branch will be based on a long-running branch
+</details>
 
 <br>
 
 ***
 ### **Git branch cheatsheet**
 <div align=center>
-    <img src="git-branch-cheatsheet.png"/><br>
+    <img src="/figs/git-branch-cheatsheet.png"/><br>
     Fig. common-used git cmd.  
 </div> 
 
 ## An overview about git workflow
 <div align=center>
-    <img src="git-workflow-1.png"/><br>
+    <img src="/figs/git-workflow-1.png"/><br>
     Fig. overview git workflow.  
 </div> 
+
+<br>
+
+***
+
+<details>
+    <summary>Advanced git skills 》》》</summary>
+
+## Pull requests
+- Provided by Git hosting
+- Invites reviewers to provide feedback before merging
+- Give ideas to an open-source repo that you don't have right access to  
+  <br>
+  > **fork**: your personal copy of a git repo.  
+  Make changes in your forked version and open a pull request to include those changes into the original repo.
+
+  <div align=center>
+    <img src="/figs/fork.png"/><br>
+    Fig. fork.  
+  </div> 
+- Intuitively **pull request** is actually a **push request**. The reason why it is called pull request is, it was us who ask the repo maintainer to pull our changes to thier works.
+
+## Merge conflicts
+- **When occurs?** -- when integrating commits from different sources
+  - merging branches
+  - interactive rebasing
+  - cherry pick
+  - pull
+  - reapplying a stash
+- **What is?**
+- **How to solve?**
+
+## Merge vs. Rebase
+
+</details>
