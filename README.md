@@ -7,7 +7,7 @@
 <br>  
 
 An official interactivable animation about git commands: [learn git branching](https://learngitbranching.js.org/?locale=zh_CN)  
-
+For easy setup and get familiar with git cmd, check [Git: Reference Sheet](https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet)
 
 ***
 ## 0) Git concept
@@ -62,19 +62,15 @@ Copy and paste to git account.
 
 <br>
 <div align=center>
-    <p float="left">
-    <img src="layout.png" height="250" />
-    <img src="dir.png" height="250" /> 
-  </p>
-    Fig. Layout of Git repository.  
-
+    <img src="dir.png"/>  
+    Fig. How a git directory looks like.  
 </div> 
 <br>
 
 - **Working Directory:** Your local folder containing the code
-- **Stage (Index):** A changelog file, containing the information about to-be-committed changes
-- **History:** A temporary storage to save the committed changes
-- **Remote Dirtectory:** The git server, the online repository
+- **Stage (Index):** A temporary storage to save the to-be-committed changes
+- **Local Repo:** contains the committed changes locally; not updated to remote repo yet.
+- **Remote Repo:** the online repository on git server
 
 <br>
 <div align=center>
@@ -96,7 +92,7 @@ git commit -m "commit message"  # commit the changes added in temp storage to LO
 git push    # push the changes to remote repo
 ```
 <details>
-    <summary>Commit syntax (CHN):</summary>
+    <summary>Commit message syntax (CHN):</summary>
 
 referd from [zhihu (CHN)](https://zhuanlan.zhihu.com/p/182553920)  
 
@@ -142,8 +138,18 @@ scope用于说明 commit 影响的范围，比如数据层、控制层、视图�
 **subject(必须)**
 
 subject是commit目的的简短描述，不超过50个字符。
-</details>
+</details>  
 <br>
+
+What's better: **DO NOT commit all the changes at one time**  
+<div align=center>
+    <p float="left">
+    <img src="bad_commit.png" height="175" />
+    <img src="good_commit.png" height="175" />
+    </p>
+</div>  
+
+<br>  
 
 To check file status:  
 ```bash
@@ -163,9 +169,14 @@ git status  # OPTIONAL: check the file status
     > 通过 `git checkout` 从库中取出原来版本覆盖，放弃更改，回到 `Unmodify` 状态
 - `Staged`: **暂存状态**
     > 执行 `git commit` 将修改同步到库；  
-    > 执行 `git reset HEAD <filename>` 撤销已执行的暂存，回到 `Modified` 状态
+    > 执行 `git reset HEAD [filename]` 撤销已执行的暂存，回到 `Modified` 状态
 </details>
 <br>
+
+To check file changes:  
+```bash
+git diff [filename]  # OPTIONAL: check the file status
+```
 
 ***
 ### 2.2) Create your own git project
@@ -223,7 +234,11 @@ doc/*.txt   # 会忽略 doc 目录中的 .txt文件，但不会忽略 doc/server
     Fig. common-used git cmd.  
 </div> 
 
-## 3) Git in IDE
+## 3) Git addon in IDE / Git desktop app
+E.g. git addon in VSCode, GitKraken etc... But recommended is that first  get familiar with git workflow with cmd lines, knowing what you are doing, then come to these GUI git tools.
+
+> Check [GitKraken cheat sheet](GitKraken-Client-Cheat-Sheet-v5b.pdf)
+
 
 ## **4) Git branch (for coorpation!)**
 <div align=center>
